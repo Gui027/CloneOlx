@@ -3,17 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
- const Rotas () => {
+const Rotas = () => {
   return (
-  <Routes>
-    <Route path="/">
-      element={<Home />}
-    </Route>
-    <Route path="/about">
-      element={<About />}
-    </Route>
-  </Routes>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+  );
 };
 
 export default Rotas;
