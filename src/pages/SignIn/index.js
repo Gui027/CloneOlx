@@ -17,6 +17,7 @@ const Page = () => {
     const handleSubmit = async (e) => {
         e.preventDefault(); // prevenir o comportamento padrão, não envia o formulário se tiver incompleto.
         setDisable(true); // desabilita os campos.
+        setError('');
 
         const json = await api.login(email, password);
 
