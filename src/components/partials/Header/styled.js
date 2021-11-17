@@ -19,7 +19,7 @@ a {
     flex:1;
     display:flex;
     align-items:center;
-    height:95px;
+    height:60px;
 
     .logo-1,
     .logo-2,
@@ -37,7 +37,7 @@ nav {
     padding-bottom:10px;
 
     ul, li {
-        margin:0
+        margin:0;
         padding:0;
         list-style:none;
     }
@@ -69,7 +69,7 @@ nav {
                 background-color:#FF8100;
                 border-radius:4px;
                 color:#FFF;
-                padding:5px 10px
+                padding:5px 10px;
             }
 
             &.button:hover {
