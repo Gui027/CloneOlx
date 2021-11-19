@@ -8,6 +8,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import AdPage from "./pages/AdPage";
 import AddAd from "./pages/AddAd";
+import Ads from "./pages/Ads";
 
 const Rotas = () => {
   return (
@@ -17,6 +18,7 @@ const Rotas = () => {
       <RouteHandler path="/signin" element={<SignIn />} />
       <RouteHandler path="/signup" element={<SignUp />} />
       <RouteHandler path="/ad/:id" element={<AdPage />} />
+      <RouteHandler path="/ads" element={<Ads />} />
       <RouteHandler private path="/post-an-ad" element={<AddAd />} />
       <RouteHandler element={<NotFound />} />
     </Routes>
