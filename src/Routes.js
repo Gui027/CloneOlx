@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import RouteHandler from "./components/RouteHandler";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,16 +12,32 @@ import Ads from "./pages/Ads";
 
 const Rotas = () => {
   return (
-    <Routes>
-      <RouteHandler path="/" element={<Home />} />
-      <RouteHandler path="/about" element={<About />} />
-      <RouteHandler path="/signin" element={<SignIn />} />
-      <RouteHandler path="/signup" element={<SignUp />} />
-      <RouteHandler path="/ad/:id" element={<AdPage />} />
-      <RouteHandler path="/ads" element={<Ads />} />
-      <RouteHandler private path="/post-an-ad" element={<AddAd />} />
-      <RouteHandler element={<NotFound />} />
-    </Routes>
+    <Switch>
+      <RouteHandler exact path="/">
+        <Home />
+      </RouteHandler>
+      <RouteHandler exact path="/about" >
+        <About />
+      </RouteHandler>
+      <RouteHandler exact path="/signin">
+        <SignIn />
+      </RouteHandler>
+      <RouteHandler exact path="/signup">
+        <SignUp />
+      </RouteHandler>
+      <RouteHandler exact path="/ad/:id">
+        <AdPage />
+      </RouteHandler>
+      <RouteHandler exact path="/ads">
+        <Ads />
+      </RouteHandler>
+      <RouteHandler private exact path="/post-an-ad">
+        <AddAd />
+      </RouteHandler>
+      <RouteHandler>
+        <NotFound />
+      </RouteHandler>
+    </Switch>
   );
 };
 

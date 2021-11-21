@@ -59,10 +59,10 @@ const Page = () => {
         }
     }, [adsTotal]);
 
-    useEffect(()=>{
+    useEffect(() => {
         setResultOpacity(0.3);
         getAdsList();
-    },[currentPage]);
+    }, [currentPage]);
 
     useEffect(() => {
         let queryString = [];

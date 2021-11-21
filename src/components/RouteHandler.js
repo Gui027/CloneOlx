@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router";
+import { Route, Redirect } from "react-router";
 import { isLogged } from '../helpes/AuthHandler';
 
 export default ({ children, ...rest }) => {
